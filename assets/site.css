@@ -70,8 +70,12 @@ footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
 
 @media (max-width: 760px) {
   .feat { grid-template-columns: minmax(0, 1fr); }
-  .maya { flex-direction: column-reverse; text-align: center; padding: 22px 20px 0; }
-  .maya div { padding-bottom: 0; }
+  .hero .logo { transform: translateX(-5%); }   /* the artist on the right of the logo pulls it off-center on narrow screens */
+  .maya { flex-direction: column; text-align: center; padding: 22px 20px 22px; }
+  .maya img { order: -1; width: 120px; align-self: center; margin-bottom: -4px; }
+  .maya div { padding-bottom: 0; display: flex; flex-direction: column; align-items: center; }
+  footer .wrap { flex-direction: column; justify-content: center; text-align: center; }
+  footer nav { justify-content: center; }
   .bar nav { gap: 12px; } .bar nav a { font-size: 14px; }
   .brand span { display: none; }
   section.band { padding-block: 40px; }
